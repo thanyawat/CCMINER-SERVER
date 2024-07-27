@@ -13,7 +13,7 @@ pkg update -y
 ```
 พิมพ์ N ในทุกการเรียกถาม
 ```
-pkg install proot-distro -y && proot-distro install ubuntu && pkg install nano -y && pkg install wget -y && cd /data/data/com.termux/files/usr/etc && nano profile
+pkg install proot-distro nano -y && proot-distro install ubuntu && cd /data/data/com.termux/files/usr/etc && nano profile
 ```
 * เลื่อนเคอร์เซอร์ลงไปล่างสุด ในบรรทัดสุดท้าย ใส่คำสั่ง
 ```
@@ -24,7 +24,7 @@ proot-distro login ubuntu
 
 ## การติดตั้งตามขั้นตอน
 ```
-apt-get update -y && apt-get install git -y && git clone https://github.com/saengx/CCMINER-SERVER && cd CCMINER-SERVER && chmod +x setup.sh && sh setup.sh
+apt-get update -y && apt-get install git -y && git clone https://github.com/saengx/CCMINER-SERVER && cd CCMINER-SERVER && chmod +x setup.sh setupdate.sh && ./setup.sh
 ```
 * หลังจากเปิดไฟล์ bash.bashrc เพิ่มบรรทัดแรกด้วยการ enter เลื่อนเคอร์เซอร์ขึ้นด้านบน ใส่คำสั่ง
 - ```run-miner```
