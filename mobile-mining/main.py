@@ -36,7 +36,6 @@ def runOffline():
             load = set.read()
             loads = json.loads(load)
             pool = loads['pool']
-            algo = loads['algo']
             wallet = loads['wallet']
             password = loads['pass']
         if pool == "" or wallet == "":
@@ -61,7 +60,6 @@ def runOffline():
         print("WALLET =",wallet)
         print("NAME   =",name)
         print("POOL   =",pool)
-        print("ALGO   =",algo)
         print("CPU    =",cpu)
         if pool in zergpool:
 
