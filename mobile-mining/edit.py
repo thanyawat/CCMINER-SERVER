@@ -15,10 +15,6 @@ def OffMiner():
        print(" \033[93mstratum+tcp://sg.vipor.net:5040\033[00m")
        pool = input(" pool : ")
        print("\033[35m-----------------------------------------\033[0m")
-
-       print("ตัวอย่าง: \033[93mverus\033[00m")
-       algo = input("algo: ")
-       print("\033[35m-----------------------------------------\033[0m")
         
        print("ตัวอย่าง: \033[93mRKh6cinBtWFspyBfK6Xsu8JKJsFyfYmUCr\033[00m")
        wallet = input("wallet: ")
@@ -41,7 +37,6 @@ def OffMiner():
             os.system("edit-miner")   
    push = {
          'pool': pool,
-         'algo': algo,
          'wallet': wallet,
          'pass': password
           }
