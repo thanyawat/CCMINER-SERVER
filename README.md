@@ -1,5 +1,6 @@
-# AUTO RUN CCMINER IN TERMUX
+# CCMINER High Hashrate
 
+* เปิดแอป termux
 * แตะจอค้าง เลือก more
 * เลือก Keep screen on
 
@@ -9,7 +10,7 @@ termux-setup-storage
 * กดยอมรับ
 
 ```
-pkg update -y
+pkg up -y && pkg upg -y
 ```
 พิมพ์ N ในทุกการเรียกถาม
 ```
@@ -22,7 +23,7 @@ proot-distro login ubuntu
 * ctrl+x แล้วตอบ y เพื่อ save
 * ปิด แล้วเปิด termux ใหม่อีกครั้ง
 
-## การติดตั้งตามขั้นตอน
+## การติดตั้ง ccminer
 ```
 apt-get update -y && apt-get install git -y && git clone https://github.com/saengx/CCMINER-SERVER && cd CCMINER-SERVER && chmod +x setup.sh setupdate.sh && ./setup.sh
 ```
@@ -34,8 +35,9 @@ apt-get update -y && apt-get install git -y && git clone https://github.com/saen
 
 ## กรณีหากเป็น zergpool การใส่password ไม่ต้องใส่ ID=ชื่อ ระบบจะทำการaddใส่ให้อัตโนมัติ
 * หากต้องการหยุดขุดให้ใช้กด ```CTRL + C```
-* หากต้องการเปลี่ยน TAG ใช้คำสั่ง ```edit-miner```
+* หากต้องการเปลี่ยน ค่า pool และ wallet ใช้คำสั่ง 
+```edit-miner```
 * หากต้องการเปิดขุด ใช้คำสั่ง ```run-miner```
 
 * หากต้องการเพิ่ม ip สำหรับเชื่อมต่อ ใช้คำสั่ง ```add-ip```
-# AUTORUN-CCMINER-X
+# CCMINER
