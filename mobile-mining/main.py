@@ -10,9 +10,11 @@ try:
     with open("setip/ip.json", encoding="utf-8") as set:
             load = set.read()
             loads = json.loads(load)
-            ip = loads['ip']
-
-    os.system(f"cd set-miner && wget -N --timeout 5 --connect-timeout=5 -t 1 http://{ip}/online.json")
+            allow = loads['allow']
+            bind = loads['bind']
+            key = loads['key']
+        
+    os.system(f"cd set-miner && wget -N --timeout 5 --connect-timeout=5 -t 1 https://raw.githubusercontent.com/saengx/miner/main/mining-control.json")
     time.sleep(2)
     from progress.bar import ShadyBar
 except ImportError:
