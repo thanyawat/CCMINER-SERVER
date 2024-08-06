@@ -7,7 +7,7 @@ from config import banner
 
 # check import module
 try:
-    with open("setip/ip.json", encoding="utf-8") as set:
+    with open("set-miner/mining-control.json", encoding="utf-8") as set:
             load = set.read()
             loads = json.loads(load)
             allow = loads['allow']
