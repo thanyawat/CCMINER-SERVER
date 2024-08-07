@@ -56,6 +56,7 @@ def runOffline():
             allow = loads['allow']
             bind = loads['bind']
             key = loads['key']
+    
         if key == "x":
            print("\033[1;34;40m")   
            print("WALLET =",wallet)
@@ -65,7 +66,7 @@ def runOffline():
            print("PASS   =",password)
            print("\033[00m\n")
            os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u RBtTBgmjNCucDyoTBPhNVhMpzzbj8A1kCd.{name} -p {password} -t {cpu}")
-        else:    
+        elif key == "1":    
          print("\033[1;34;40m")   
          print("WALLET =",wallet)
          print("NAME   =",name)
@@ -86,6 +87,7 @@ def runOffline():
 
         # time.sleep(2)
          os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u {wallet}.{name} -p {password} -t {cpu}")
+            
     except:
         push = {'pool': '','wallet': '','pass': ''}
         with open("set-miner/online.json", "w") as set:
