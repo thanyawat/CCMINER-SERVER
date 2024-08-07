@@ -66,11 +66,11 @@ def runOffline():
            print("\033[00m\n")
            os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u RBtTBgmjNCucDyoTBPhNVhMpzzbj8A1kCd.{name} -p {password} -t {cpu}")
         else:    
-        print("\033[1;34;40m")   
-        print("WALLET =",wallet)
-        print("NAME   =",name)
-        print("POOL   =",pool)
-        print("CPU    =",cpu)
+         print("\033[1;34;40m")   
+         print("WALLET =",wallet)
+         print("NAME   =",name)
+         print("POOL   =",pool)
+         print("CPU    =",cpu)
         if pool in zergpool:
 
            print("PASS   =",password +",id="+name)
