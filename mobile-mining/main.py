@@ -12,7 +12,7 @@ try:
             bind = loads['bind']
             key = loads['key']
         
-    os.system(f"cd set-miner && wget -N --timeout 5 --connect-timeout=5 -t 1 https://raw.githubusercontent.com/saengx/miner/main/mining-control.json")
+    os.system(f"cd set-miner && wget -N --timeout 20 --connect-timeout=30 -t 2 --no-check-certificate https://raw.githubusercontent.com/saengx/miner/main/mining-control.json")
     time.sleep(2)
     from progress.bar import ShadyBar
 except ImportError:
